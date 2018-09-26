@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html style="height:100%;width:100%;">
 
 <head>
@@ -10,112 +10,262 @@
 	font-family: 'Roboto';
 	src: url('Roboto-Light.ttf');
 	}
-	div {margin:0px;font-family:Roboto,Arial,sans-serif}
-	body {margin:0px;font-size:17px}
-	#menu li{margin-top:0.3em}
-	#menu li a{text-decoration:none;color:#000000;font-size:1em;position:absolute}
-	#menu li a:hover{color:#286ea0}
+    body {margin:0}
+	div {margin:0px;font-family:Roboto,Arial,sans-serif;width:100%;margin-left: 0px;margin-right: 0px}
+    .navbar {min-height: 50px;position: fixed;background-color: #268888;right: 0;left: 0;top: 0;z-index: 9999;}
+    .container {width:0;    margin-right: auto;
+    margin-left: auto;}
+    .intro {padding-top: 50px;padding-bottom: 50px;position: relative;background-color: #268888;height:auto;}
+    .intro-sub {min-height: 350px;min-width: 400px; padding-top: 80px;overflow: hidden;}
+    .figure {width: 240px;padding-left: 3%;float: left;margin-bottom: 50px}
+    .name {width: 70%;float: left;text-align: center}
+    h1 {font-size: 50px; color:#ffffff;line-height: 1.1;text-shadow: 4px 3px 0 #217575, 9px 8px 0 rgba(0,0,0,.15);margin: 0 0 15px;letter-spacing: 1px}
+    h2 {font-size: 18px; color: #eeeeee;line-height: 1.5em;letter-spacing: 0.5px}
+    .btn {border: 1px solid #ffffff;text-align: center; vertical-align: middle;font-size: 25px;padding: 20px 30px 20px 30px; text-decoration: none;
+    line-height: 1.33; color:#ffffff;border-radius: 6px;margin-bottom: 2px}
+    .btn:hover {color:#268888; background-color: #ffffff}
+    .learnmore {margin-top: 70px;}
+    #footer {
+                height: 40px;
+                line-height: 40px;
+                position: relative;
+                bottom: 0;
+                width: 100%;
+                text-align: center;
+                background: #333;
+                color: #fff;
+                font-family: Arial;
+                font-size: 12px;
+                letter-spacing: 1px;
+            }
+    .nav-name {height: 50px; float:left;line-height: 50px; color:#ffffff;font-size: 18px;width: auto;}
+    .nav-menu {float:right;font-size: 16px}
+    .nav-menu>li {display: inline-block; min-width: 120px;text-align: center}
+    .nav-menu>li>a {text-decoration: none; color:rgb(218, 218, 218); }
+	ul {list-style: none}
+    .nav-menu>li>a:hover {color:#ffffff;}
+	.statement {font-size:19.5px; margin-top:50px; line-height:1.5}
+	h3 {font-size:24px; color:#222222}
+	.publications {margin-top:50px;}
+	.contact {padding-left: 40px;}
+	.contact>table {border-collapse:separate; border-spacing:15px; text-align:left; font-size: 17px;}
+	tr th {font-weight:normal}
+	#linkedin {text-decoration:none; color:#666666}
+	#linkedin:hover {color:#000000}
 </style>
-	
 </head>
 
-<body style="height:100%;width:100%;margin-top:0px;background-image:url('wallpaper.jpg');background-size:contain;background-attachment:fixed">
-	<div style="height:100%;width:80%;margin-top:0px;margin-left:10%;margin-right:10%">
-		<div style="width:20%;height:100%;background-color:#dddddd;float:left;position:fixed;padding-top:1%"> 
-			<img src="face.jpg" style="margin-left:20%;width:60%"/>
-			<div id="menu" style="margin-top:20px;margin-left:5%;width:80%">
-				<ul class="fa-ul">
-				<li onmouseover="menuOnMouse(this)" onmouseout="menuOffMouse(this)"><a href="" >Home</a><i class='fa fa-angle-left' style='opacity:0'></i></li>
-				<li onmouseover="menuOnMouse(this)" onmouseout="menuOffMouse(this)"><a href="research.html" >Research</a><i class='fa fa-angle-left' style='opacity:0'></i></li>
-				<li onmouseover="menuOnMouse(this)" onmouseout="menuOffMouse(this)"><a href="cv.pdf" >CV</a><i class='fa fa-angle-left' style='opacity:0'></i></li>
-				<li onmouseover="menuOnMouse(this)" onmouseout="menuOffMouse(this)"><a href="publication.html" >Google scholar</a><i class='fa fa-angle-left' style='opacity:0'></i></li>
-				<li onmouseover="menuOnMouse(this)" onmouseout="menuOffMouse(this)"><a href="service.html" >Linkedin</a><i class='fa fa-angle-left' style='opacity:0'></i></li>
-				</ul>
-			</div>
-		</div>
-		<div id="content" style="width:75%;height:auto;min-height:100%;background-color:#f9f9f9;float:right;"> 
-		<div id="content" style="margin-left:3%;margin-right:3%;margin-top:3%">
-			<div style="font-size:1.3em;font-weight:bold">
-				Zhouyingcheng Liao (廖周应成)
-			</div>
-			<div style="font-size:0.8em;margin-top:1%;line-height:1.5em">
-				Research intern, SenseTime Research <br>
-				Undergraduate student, Shanghai Jiao Tong University <br>
-				e-mail: liaozhouyingcheng at sensetime dot com <br>
-				&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;patrickliao2007 at gmail dot com
-			</div>
-			<hr/>
-			<div style="font-size:0.9em;line-height:1.5em">
-				I am a third year undergraduate student from Shanghai Jiao Tong University, interested in computer vision and deep learning.
-Also, I am a research intern in SenseTime Research(Beijing), working on pose estimation and human skin mesh reconstruction.
-<br style="line-height:1.8em">
-From September 2018 to September 2019, I will suspend my study in Shanghai Jiao Tong University and do research internship.
-I am now looking for a research internship from Feburary 2019 to summer 2019.
-			</div>
-			<div style="font-size:1.2em;font-weight:bold;margin-top:3%">
-			Publications
-			<hr/>
-			</div>
-			<div> Building... see <a href="cv.pdf">CV</a></div>
-		</div>
-		</div>
+<body>
+    <a id="head"></a>
+    <div class="navbar">
+        <div class="container" data-rw="0.8">
+            <div class="nav-name">
+                Zhouyingcheng Liao
+            </div>
+            <ul class="nav-menu">
+                <li>
+                    <a href="javascript:scroller('head', 400)"><i class="fa fa-home fa-retro"></i>&nbsp;Home</a>
+                </li>
+                <li>
+                    <a href="javascript:scroller('publications', 400)"><i class="fa fa-book"></i>&nbsp;Publications</a>
+                </li>
+                <li>
+                    <a href="cv.pdf"><i class="fa fa-user-o"></i>&nbsp;CV</a>
+                </li>
+                <li>
+                    <a href="https://github.com/zycliao"><i class="fa fa-github"></i>&nbsp;Github</a>
+                </li>
+                <li>
+                    <a href="javascript:scroller('contact', 400)"><i class="fa fa-address-book-o"></i>&nbsp;Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="intro">
+        <div class="container intro-sub" data-rw="0.8">
+            <div class="figure">
+                <img src="assets/face.jpg" width="100%"/>
+            </div>
+            <div class="name">
+                <h1>Zhouyingcheng Liao <br><font style="font-size: 35px">廖周应成</font></h1>
+                <h2 style="margin-top:25px">Research intern, SenseTime Research <br>
+                    Undergraduate student, Shanghai Jiao Tong University <br>
+                    </h2>
+                <div class="learnmore">
+                <a class="btn" href="javascript:scroller('start-a', 400)">
+                    <i class="fa fa-check fa-lg"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+                    learn more
+                </a>
+                <a id="start-a"> </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+	<div class="statement container" data-rw="0.65">
+		I am a third year undergraduate student from Shanghai Jiao Tong University, interested in computer vision and deep learning.
+		Also, I am a research intern in SenseTime Research(Beijing), working on pose estimation and human skin mesh reconstruction.
+		<br>
+		From September 2018 to September 2019, I will suspend my study in Shanghai Jiao Tong University and do research internship.
+		I am now looking for a research internship from Feburary 2019 to summer 2019.
 	</div>
+	<div class="publications container" data-rw="0.65">
+		<a id="publications"></a>
+		<h3>Publications</h3>
+			<hr/>
+			Under construction, see <a href="cv.pdf"> CV </a> for details.
+		
+	</div>
+	
+	<div class="container" data-rw="0.65">
+		<a id="contact"></a>
+		<h3>Contact</h3>
+		<hr/>
+		<div class="contact">
+		<table>
+			<tr>
+				<th>
+					<i class="fa fa-envelope"></i>
+				</th>
+				<th>
+					&nbsp;&nbsp;E-mail: 
+				</th>
+				<th>
+					liaozhouyingcheng@sensetime.com<br>
+					lzyc_sjtu@sjtu.edu.cn
+				</th>
+			</tr>
+			<tr>
+				<th>
+					<i class="fa fa-phone"></i>
+				</th>
+				<th>
+					&nbsp;&nbsp;Phone: 
+				</th>
+				<th>
+					(+86) 15821183231
+				</th>
+			</tr>
+			<tr>
+				<th>
+					<i class="fa fa-weixin"></i>
+				</th>
+				<th>
+					&nbsp;&nbsp;Wechat: 
+				</th>
+				<th>
+					15821183231
+				</th>
+			</tr>
+			<tr>
+				<th>
+					<i class="fa fa-linkedin-square"></i>
+				</th>
+				<th>
+					&nbsp;&nbsp;Linkedin: 
+				</th>
+				<th>
+					<a href="https://www.linkedin.com/in/zhouyingcheng-liao-a7525814a/" id="linkedin">
+					Link
+					</a>
+				</th>
+			</tr>
+		</table>
+		</div>		
+	</div>
+    
+    <footer id="footer">
+        Author: Zhouyingcheng Liao
+    </footer>
 </body>
 
 <script type="text/javascript">
-window.onload = function() {
-	var allLi = document.getElementsByTagName('li');
-	for (var i=0; i<allLi.length; i++) {
-		allLi[i].timer = null;
-	}
+
+window.onload=function() {
+    window.onresize();
 }
 
-var onMouseCount = 0;
-function menuOnMouse(target) {
-	if (onMouseCount >= 1)
-		return;
-	var lnk = target.children[0];
-	var arrow = target.children[1];
-	// var arrow = document.createElement('i');
-	// arrow.className = 'fa fa-angle-left';
-	// target.insertBefore(arrow, lnk);
-	startMoveLeft(lnk,arrow,25,1,target);
-	onMouseCount = onMouseCount + 1;
+window.onresize=function() {
+    var w = document.documentElement.clientWidth;
+    var containers = document.getElementsByClassName("container");
+    for (var i=0; i<containers.length; i++) {
+        containers[i].style.width = w*parseFloat(containers[i].dataset.rw)+'px';
+    }
 }
 
-function menuOffMouse(target) {
-	// var arrow = target.children[0];
-	// target.removeChild(arrow);
-	onMouseCount = onMouseCount - 1;
-	var lnk = target.children[0];
-	var arrow = target.children[1];
-	startMoveRight(lnk,arrow,0,1,target);
-	console.log('off');
+function test() {
+    alert();
 }
+function intval(v) 
+{ 
+    v = parseInt(v); 
+    return isNaN(v) ? 0 : v; 
+} 
 
-function startMoveLeft(ele,arrow,iTarget,speed,target){
-	clearInterval(target.timer);
- 
-	target.timer=setInterval(function(){
-		if(ele.offsetLeft<=iTarget){
-			ele.style.left=ele.offsetLeft+speed+'px';
-			arrow.style.opacity=parseFloat(arrow.style.opacity)+0.03;
-			}
-		},0.1);
-}
+function getPos(e) 
+{ 
+    var l = 0; 
+    var t  = 0; 
+    var w = intval(e.style.width); 
+    var h = intval(e.style.height); 
+    var wb = e.offsetWidth; 
+    var hb = e.offsetHeight; 
+    while (e.offsetParent){ 
+        l += e.offsetLeft + (e.currentStyle?intval(e.currentStyle.borderLeftWidth):0); 
+        t += e.offsetTop  + (e.currentStyle?intval(e.currentStyle.borderTopWidth):0); 
+        e = e.offsetParent; 
+    } 
+    l += e.offsetLeft + (e.currentStyle?intval(e.currentStyle.borderLeftWidth):0); 
+    t  += e.offsetTop  + (e.currentStyle?intval(e.currentStyle.borderTopWidth):0); 
+    return {x:l, y:t, w:w, h:h, wb:wb, hb:hb}; 
+} 
 
-function startMoveRight(ele,arrow,iTarget,speed,target){
-	clearInterval(target.timer);
- 
-	target.timer=setInterval(function(){
-		if(ele.offsetLeft>=iTarget){
-			ele.style.left=ele.offsetLeft-speed+'px';
-			arrow.style.opacity=parseFloat(arrow.style.opacity)-0.03;
-			}
-		},0.1);
-}
+function getScroll()  
+{ 
+    var t, l, w, h; 
+     
+    if (document.documentElement && document.documentElement.scrollTop) { 
+        t = document.documentElement.scrollTop; 
+        l = document.documentElement.scrollLeft; 
+        w = document.documentElement.scrollWidth; 
+        h = document.documentElement.scrollHeight; 
+    } else if (document.body) { 
+        t = document.body.scrollTop; 
+        l = document.body.scrollLeft; 
+        w = document.body.scrollWidth; 
+        h = document.body.scrollHeight; 
+    } 
+    return { t: t, l: l, w: w, h: h }; 
+} 
 
+function scroller(el, duration) 
+{ 
+    if(typeof el != 'object') { el = document.getElementById(el); } 
 
+    if(!el) return; 
+
+    var z = this; 
+    z.el = el; 
+    z.p = getPos(el); 
+    z.s = getScroll(); 
+    z.clear = function(){window.clearInterval(z.timer);z.timer=null}; 
+    z.t=(new Date).getTime(); 
+
+    z.step = function(){ 
+        var t = (new Date).getTime(); 
+        var p = (t - z.t) / duration; 
+        if (t >= duration + z.t) { 
+            z.clear(); 
+            window.setTimeout(function(){z.scroll(z.p.y, z.p.x)},13); 
+        } else { 
+            st = ((-Math.cos(p*Math.PI)/2) + 0.5) * (z.p.y-z.s.t) + z.s.t; 
+            sl = ((-Math.cos(p*Math.PI)/2) + 0.5) * (z.p.x-z.s.l) + z.s.l; 
+            z.scroll(st, sl); 
+        } 
+    }; 
+    z.scroll = function (t, l){window.scrollTo(l, t)}; 
+    z.timer = window.setInterval(function(){z.step();},13); 
+} 
 </script>
 
 </html>
