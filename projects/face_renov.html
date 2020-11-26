@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HiFaceGAN: Face Renovation via Collaborative Suppression and Replenishment</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+	<meta property="og:title" content="HiFaceGAN: Face Renovation via Collaborative Suppression and Replenishment">
+	<meta property="og:url" content="https://lotayou.github.io/projects/face_renov.html">
+	<meta property="og:image" content="">
+	<meta property="og:description" content="We propose a simple yet effective signed attribute vector (SAV) that facilitates continuous translation on diverse mapping paths across multiple domains.">
+	<meta name="description" content= "We propose a simple yet effective signed attribute vector (SAV) that facilitates continuous translation on diverse mapping paths across multiple domains.">
+	<meta name="keywords" content="SAVI2I, Deep Learning, Image-to-Image Translation, Continuous Translation, Diverse">
+	<meta name="author" content="Qi Mao">
+	<!-- jQuery -->
+	<script
+		src="https://code.jquery.com/jquery-3.1.0.min.js"
+		integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
+		crossorigin="anonymous"></script>
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 text-center">
+				<br>
+				<h1>HiFaceGAN: Face Renovation via Collaborative Suppression and Replenishment</h1>
+				<br>
+				<h4><a href="https://lotayou.github.io">Lingbo&nbsp;Yang</a><sup>1,3</sup> &emsp; 
+                Chang&nbsp;Liu</a><sup>2</sup> &emsp; 
+                Pan&nbsp;Wang</a><sup>3</sup> &emsp;
+                Shanshe&nbsp;Wang</a><sup>1</sup> &emsp; 
+                Shanshe&nbsp;Wang</a><sup>1</sup> &emsp; 
+                Siwei&nbsp;Ma</a><sup>1</sup> &emsp; 
+                Wen&nbsp;Gao</a><sup>1</sup> &emsp; 
+                
+                </h4>
+			</div>
+			<div class="col-xs-12 text-center">
+			</div>
+			<div class="col-xs-12 text-center">
+			</div>
+			<div class="col-xs-12 text-center">
+				<h4><sup>1</sup>Peking&nbsp;University&emsp; <sup>2</sup>University&nbsp;of&nbsp;Chinese&nbsp;Academy&nbsp;of&nbsp;Sciences&emsp; <sup>3</sup>Alibaba&nbsp;DAMO&nbsp;Academy&emsp;</h4>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="row">
+					<div class="col-xs-12 col-sm-7">
+						<img class="img-responsive" src="face_renov/teaser.PNG">
+					</div>
+					<div class="col-xs-12 col-sm-5" >
+						<img class="img-responsive" src="https://user-images.githubusercontent.com/33449901/92845327-6c816300-f419-11ea-9b03-67d29a179edf.gif" width="600" height="300">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 text-left">
+				<h3>Abstract</h3>
+				<p>
+                Existing face restoration researches typically relies on either the degradation prior or explicit guidance labels for training, which often results in limited generalization ability over real-world images with heterogeneous degradations and rich background contents. In this paper, we investigate the more challenging and practical "dual-blind" version of the problem by lifting the requirements on both types of prior, termed as "Face Renovation"(FR). Specifically, we formulated FR as a semantic-guided generation problem and tackle it with a collaborative suppression and replenishment (CSR) approach. This leads to HiFaceGAN, a multi-stage framework containing several nested CSR units that progressively replenish facial details based on the hierarchical semantic guidance extracted from the front-end content-adaptive suppression modules. Extensive experiments on both synthetic and real face images have verified the superior performance of HiFaceGAN over a wide range of challenging restoration subtasks, demonstrating its versatility, robustness and generalization ability towards real-world face processing applications.
+                </p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 text-left">
+				<h3>Navigation Links</h3>
+				<a href="https://dl.acm.org/doi/abs/10.1145/3394171.3413965">
+					<button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-save-file" aria-hidden="true"></span> Paper</button>
+				</a>
+				<a href="https://github.com/Lotayou/Face-Renovation">
+					<button type="button" class="btn btn-primary"><img src="img/GitHub-Mark-Light-32px.png" height="16px"> Code</button>
+				</a>
+                <a href="https://github.com/Lotayou/Face-Renovation/blob/master/benchmark.md">
+					<button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-save-file" aria-hidden="true"></span> Benchmark Performance</button>
+				</a>
+                <a href="https://github.com/Lotayou/Face-Renovation-teaser-gifs">
+					<button type="button" class="btn btn-primary"><img src="img/GitHub-Mark-Light-32px.png" height="16px"> Video Results</button>
+				</a>
+			</div>
+		</div>
+        <div class="row">
+			<div class="col-xs-12 text-left">
+				<h3>Quantitative Examples</h3>
+                <img class="img-responsive" src="https://user-images.githubusercontent.com/33449901/82039922-47cde680-96d8-11ea-8d16-8158abb3eccf.jpg">
+			</div>
+		</div>
+        <br>
+        <div class="row">
+			<div class="col-xs-12 text-left">
+				<h3>Dynamic Perception-Distortion Tradeoff</h3>
+				
+                <div class="statement container" data-rw="0.65">
+		<b>Left</b> The performances at 4x bicubic super resolution and blind restoration task on FFHQ dataset. ISPL dominates existing methods simultaneously on both aspects that it even reach beyond our initial hypothesis on the P-D boundary. Note the PSNR axis is inverted to better illustrate the tradeoff relationship.<br>
+        <br>
+        <b>Right</b>: Super resolution results under varying scaling factors. Compared to explicit prior models, ISPL consistently delivers high-quality restoration results with rich facial details.
+                </div>
+                
+			<div class="col-xs-12">
+				<div class="row">
+					<div class="col-xs-12 col-sm-6">
+						<img class="img-responsive" src="face_renov/pdtrade.JPG">
+					</div>
+					<div class="col-xs-12 col-sm-6" >
+						<img class="img-responsive" src="face_renov/comb_sade.PNG">
+					</div>
+				</div>
+			</div>
+		</div>
+        <br>
+        <div class="row">
+			<div class="col-xs-12 text-left">
+				<h3>BibTeX</h3>
+				<p>If you use our code or data, please cite:</p>
+				<pre>
+                @article{Yang2020HiFaceGAN,
+                  title={HiFaceGAN: Face Renovation via Collaborative Suppression and Replenishment},
+                  author={Lingbo Yang and C. Liu and P. Wang and Shanshe Wang and P. Ren and Siwei Ma and W. Gao},
+                  journal={Proceedings of the 28th ACM International Conference on Multimedia},
+                  year={2020}
+                }
+                </pre>
+			</div>
+		</div>
+        
+        <!-- 
+		<div class="row">
+			<div class="col-xs-12 text-left">
+				<h3>Examples</h3>
+				<a href="comparison-v2.html"><button type="button" class="btn btn-info">More comparisons with the state of the arts <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button></a>
+				<a href="result-v3.html"><button type="button" class="btn btn-info">More continuous and diverse results <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button></a>
+			</div>
+			<table class="table table-hover comparison-table">
+				<thead>
+					<tr>
+						<th>Summer2Winter</td>
+						<th>Photo2Monet</td>
+						<th>Male2Female</td>
+						<th>Cat2Dog</td>
+					</tr>
+				</thead>
+				<tbody>
+					
+								<tr>
+									<td><div class="vidcontainer">
+											<video id="glass" width="256" height="256" controls= "autoPlay" onended="this.currentTime=0; this.play()" autoplay="" src="img/s2w.mp4">
+												<source src="img/s2w.mp4" type="video/mp4">
+											</video>
+										</div>
+									</td>
+									<td><div class="vidcontainer">
+											<video id="glass" width="256" height="256" controls= "autoPlay" onended="this.currentTime=0; this.play()" autoplay="" src="img/p2a.mp4">
+												<source src="img/p2a.mp4" type="video/mp4">
+											</video>
+										</div>
+									</td>
+									<td><div class="vidcontainer">
+											<video id="glass" width="256" height="256" controls= "autoPlay" onended="this.currentTime=0; this.play()" autoplay="" src="img/m2f.mp4">
+												<source src="img/m2f.mp4" type="video/mp4">
+											</video>
+										</div>
+									</td>
+									<td><div class="vidcontainer">
+											<video id="glass" width="256" height="256" controls= "autoPlay" onended="this.currentTime=0; this.play()" autoplay="" src="img/c2d.mp4">
+												<source src="img/c2d.mp4" type="video/mp4">
+											</video>
+										</div>
+									</td>
+								</tr>
+
+						</tbody>
+				</table>
+			</div>
+			 -->
+			
+			
+			
+	
+		
+            <div class="row">
+				<div class="col-xs-12 text-right">
+					<h5>Acknowledgements: page template comes from <a href="https://phuang17.github.io/DeepMVS/index.html">Po-Han&nbsp;Huang</a> </h5>
+				</div>
+	
+	
+			</div>
+	</div>
+
+	
+	
+	<style type="text/css">
+.container {
+	background-color: #FBFBFC;
+}
+.teaser-img {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.img-responsive {
+	margin: auto;
+}
+.vidcontainer{
+    width: 256px;
+    height: 256px;
+    overflow:hidden;
+}
+#glass{
+    margin-left: -5px;
+    margin-right: -5px;
+    margin-top: -5px;
+    margin-bottom: -5px;
+}
+.comparison-table {
+	table-layout: fixed;
+    word-wrap: break-word;
+}
+.comparison-table th {
+	text-align: center;
+}
+	</style>
+</body>
+</html>

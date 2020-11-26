@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Intrinsic Temporal Regularization for High-Resolution Human Video Synthesis</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+	<meta property="og:title" content="Intrinsic Temporal Regularization for High-Resolution Human Video Synthesis">
+	<meta property="og:url" content="https://lotayou.github.io/projects/intrinsic_reg.html">
+	<meta property="og:image" content="">
+	<meta property="og:description" content="We propose a simple yet effective signed attribute vector (SAV) that facilitates continuous translation on diverse mapping paths across multiple domains.">
+	<meta name="description" content= "We propose a simple yet effective signed attribute vector (SAV) that facilitates continuous translation on diverse mapping paths across multiple domains.">
+	<meta name="keywords" content="SAVI2I, Deep Learning, Image-to-Image Translation, Continuous Translation, Diverse">
+	<meta name="author" content="Qi Mao">
+	<!-- jQuery -->
+	<script
+		src="https://code.jquery.com/jquery-3.1.0.min.js"
+		integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
+		crossorigin="anonymous"></script>
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 text-center">
+				<br>
+				<h1>Intrinsic Temporal Regularization for High-Resolution Human Video Synthesis</h1>
+				<br>
+				<h4><a href="https://lotayou.github.io">Lingbo&nbsp;Yang</a><sup>1,2</sup> &emsp;
+                Zhanning&nbsp;Gao</a><sup>2</sup> &emsp;
+                Peiran&nbsp;Ren</a><sup>2</sup> &emsp; 
+                Siwei&nbsp;Ma</a><sup>1</sup> &emsp; 
+                Wen&nbsp;Gao</a><sup>1</sup> &emsp; 
+                
+                </h4>
+			</div>
+			<div class="col-xs-12 text-center">
+			</div>
+			<div class="col-xs-12 text-center">
+			</div>
+			<div class="col-xs-12 text-center">
+				<h4><sup>1</sup>Peking&nbsp;University&emsp;  <sup>2</sup>Alibaba&nbsp;DAMO&nbsp;Academy&emsp;</h4>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12">
+						<img class="img-responsive" src="intrinsic_reg/sota.PNG">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 text-left">
+				<h3>Abstract</h3>
+				<p>
+                Temporal consistency is crucial for extending image processing
+pipelines to the video domain, which is often enforced
+with flow-based warping error over adjacent frames.
+Yet for human video synthesis, such scheme is less reliable
+due to the misalignment between source and target video
+as well as the difficulty in accurate flow estimation. In
+this paper, we propose an effective intrinsic temporal regularization
+scheme to mitigate these issues, where an intrinsic
+confidence map is estimated via the frame generator
+to regulate motion estimation via temporal loss modulation.
+This creates a shortcut for back-propagating temporal
+loss gradients directly to the front-end motion estimator,
+thus improving training stability and temporal coherence in
+output videos. We apply our intrinsic temporal regulation
+to single-image generator, leading to a powerful “INTERnet”
+capable of generating 512 * 512 resolution human action
+videos with temporal-coherent, realistic visual details.
+Extensive experiments demonstrate the superiority of proposed
+INTERnet over several competitive baselines.
+                </p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 text-left">
+				<h3>Navigation Links</h3>
+				<a href="">
+					<button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-save-file" aria-hidden="true"></span> Paper (CVPR Submission)</button>
+				</a>
+				<a href="https://www.bilibili.com/video/BV1Z541137j8">
+					<button type="button" class="btn btn-primary"><img src="img/GitHub-Mark-Light-32px.png" height="16px"> Video Results</button>
+				</a>
+                
+			</div>
+		</div>
+        <!-- 
+		<div class="row">
+			<div class="col-xs-12 text-left">
+				<h3>Examples</h3>
+                <div class="vidcontainer">
+                    <video id="glass" width="1536" height="1024" controls= "autoPlay" onended="this.currentTime=0; this.play()" autoplay="" src="img/s2w.mp4">
+                        <source src="img/s2w.mp4" type="video/mp4">
+                    </video>
+                </div>
+			</div>
+			<table class="table table-hover comparison-table">
+				<thead>
+					<tr>
+						<th>Summer2Winter</td>
+						<th>Photo2Monet</td>
+						<th>Male2Female</td>
+						<th>Cat2Dog</td>
+					</tr>
+				</thead>
+				<tbody>
+					
+								<tr>
+									<td><div class="vidcontainer">
+											<video id="glass" width="256" height="256" controls= "autoPlay" onended="this.currentTime=0; this.play()" autoplay="" src="img/s2w.mp4">
+												<source src="img/s2w.mp4" type="video/mp4">
+											</video>
+										</div>
+									</td>
+									<td><div class="vidcontainer">
+											<video id="glass" width="256" height="256" controls= "autoPlay" onended="this.currentTime=0; this.play()" autoplay="" src="img/p2a.mp4">
+												<source src="img/p2a.mp4" type="video/mp4">
+											</video>
+										</div>
+									</td>
+									<td><div class="vidcontainer">
+											<video id="glass" width="256" height="256" controls= "autoPlay" onended="this.currentTime=0; this.play()" autoplay="" src="img/m2f.mp4">
+												<source src="img/m2f.mp4" type="video/mp4">
+											</video>
+										</div>
+									</td>
+									<td><div class="vidcontainer">
+											<video id="glass" width="256" height="256" controls= "autoPlay" onended="this.currentTime=0; this.play()" autoplay="" src="img/c2d.mp4">
+												<source src="img/c2d.mp4" type="video/mp4">
+											</video>
+										</div>
+									</td>
+								</tr>
+
+						</tbody>
+				</table>
+			</div>
+			 -->
+			
+			
+	
+		<div class="row">
+			<div class="col-xs-12 text-left">
+				<h3>BibTeX</h3>
+				<p>If you use our code or data, please cite:</p>
+				<pre>
+@article{Yang2020Intrinsic,
+  title={Intrinsic Temporal Regularization for High-Resolution Human Video Synthesis},
+  author={Lingbo Yang and Zhanning Gao and Peiran Ren and Siwei Ma and Wen Gao},
+  journal={CVPR to appear},
+  year={2020}
+}</pre>
+			</div>
+		</div>
+		<div class="row">
+				<div class="col-xs-12 text-right">
+					<h5>Acknowledgements: page template comes from <a href="https://phuang17.github.io/DeepMVS/index.html">Po-Han&nbsp;Huang</a> </h5>
+				</div>
+	
+	
+			</div>
+	</div>
+
+	
+	
+	<style type="text/css">
+.container {
+	background-color: #FBFBFC;
+}
+.teaser-img {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.img-responsive {
+	margin: auto;
+}
+.vidcontainer{
+    width: 256px;
+    height: 256px;
+    overflow:hidden;
+}
+#glass{
+    margin-left: -5px;
+    margin-right: -5px;
+    margin-top: -5px;
+    margin-bottom: -5px;
+}
+.comparison-table {
+	table-layout: fixed;
+    word-wrap: break-word;
+}
+.comparison-table th {
+	text-align: center;
+}
+	</style>
+</body>
+</html>
