@@ -7,11 +7,11 @@
 <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 <style type="text/css">
 	@font-face {
-	font-family: 'Roboto';
-	src: url('Roboto-Light.ttf');
+	font-family: 'Adobe-Devanagari';
+	src: url('AdobeDevanagari-Regular.otf');
 	}
     body {margin:0}
-	div {margin:0px;font-family:Roboto,Arial,sans-serif;width:100%;margin-left: 0px;margin-right: 0px}
+	div {margin:0px;font-family:Adobe-Devanagari,sans-serif;width:100%;margin-left: 0px;margin-right: 0px}
     .navbar {min-height: 50px;position: fixed;background-color: #003366;right: 0;left: 0;top: 0;z-index: 9999;}
     .container {width:0;    margin-right: auto;
     margin-left: auto;}
@@ -20,7 +20,7 @@
     .figure {width: 240px;padding-left: 3%;float: left;margin-bottom: 50px}
     .name {width: 70%;float: left;text-align: center}
     h1 {font-size: 50px; color:#ffffff;line-height: 1.1;text-shadow: 4px 3px 0 #217575, 9px 8px 0 rgba(0,0,0,.15);margin: 0 0 15px;letter-spacing: 1px}
-    h2 {font-size: 18px; color: #eeeeee;line-height: 1.5em;letter-spacing: 0.5px}
+    h2 {font-size: 24px; color: #eeeeee;line-height: 1.5em;letter-spacing: 0.5px}
     .btn {border: 1px solid #ffffff;text-align: center; vertical-align: middle;font-size: 25px;padding: 20px 30px 20px 30px; text-decoration: none;
     line-height: 1.33; color:#ffffff;border-radius: 6px;margin-bottom: 2px}
     .btn:hover {color:#003366; background-color: #ffffff}
@@ -39,16 +39,16 @@
                 letter-spacing: 1px;
             }
     .nav-name {height: 50px; float:left;line-height: 50px; color:#ffffff;font-size: 18px;width: auto;}
-    .nav-menu {float:right;font-size: 16px}
+    .nav-menu {float:right;font-size: 20px}
     .nav-menu>li {display: inline-block; min-width: 120px;text-align: center}
     .nav-menu>li>a {text-decoration: none; color:rgb(218, 218, 218); }
 	ul {list-style: none}
     .nav-menu>li>a:hover {color:#ffffff;}
-	.statement {font-size:19.5px; margin-top:50px; line-height:1.5}
-	h3 {font-size:24px; color:#222222}
-	.publications {margin-top:50px;}
+	.statement {font-size:20px; margin-top:30px; line-height:1.4}
+	h3 {font-size:28px; color:#222222}
+    .mainblock {font-size:20px; margin-top:30px; line-height:1.4}
 	.contact {padding-left: 40px;}
-	.contact>table {border-collapse:separate; border-spacing:15px; text-align:left; font-size: 17px;}
+	.contact>table {border-collapse:separate; border-spacing:15px; text-align:left; font-size: 20px;}
 	tr th {font-weight:normal}
 	#linkedin {text-decoration:none; color:#666666}
 	#linkedin:hover {color:#000000}
@@ -87,7 +87,7 @@
     <div class="intro">
         <div class="container intro-sub" data-rw="0.8">
             <div class="figure">
-                <img src="assets/Lingbo_Yang.jpg" width="100%"/>
+                <img src="assets/Lingbo_Yang.png" width="100%"/>
             </div>
             <div class="name">
                 <h1>Lingbo Yang <br><font style="font-size: 35px">杨凌波</font></h1>
@@ -106,15 +106,21 @@
         </div>
     </div>
 	<div class="statement container" data-rw="0.65">
-		Lingbo Yang graduated from Peking University in 2016 with a Bachelor's Degree in mathematics. Currently he is pursuing a Ph. D. career in <a href="https://github.com/pkuvcl"> Video Coding Laboratory </a>, Peking University, under the supervision of Prof. Siwei Ma and Wen Gao. His main research focus lies in cross-media intelligence, especially on human pose/motion transfer, image restoration, and 3D human pose estimation. He has published quite a few papers on top-notch conferences/journals, including IEEE TIP, ACM Multimedia and ICME. Yet his best paper is always the next one.
+        <a id="statement"></a>
+		<h3>About me</h3>
+		&emsp;   &emsp;   I graduated from Peking University in 2016 with a Bachelor's Degree in mathematics. Currently I'm pursuing my Ph. D. career in <a href="https://github.com/pkuvcl"> Video Coding Laboratory </a>, Peking University, under the supervision of Prof. Siwei Ma and Wen Gao. My main research focus lies in visual content generation and manipulation, especially on human pose/motion transfer, face reenactment, and image-to-image translation. Also, I'm always fascinated about the idea of using generative methods for solving low-level vision problems, such as image restoration, enhancement, and even smart conceptual coding.
         <br>
-		Besides academic research, he is also keen on sharing the knowledge and recent technological advances with the community with github open-source projects, invited seminar talks and non-profitable subtitling services.
+        &emsp;   &emsp;   In 2020, I joined Alibaba DAMO Academy as a research intern, where I was in charge of the algorithm development of the "still2motion" project for <a href="https://alibabawood.aliyun.com/"> Alibabawood </a>, a smart promotion video creation platform for online retailers. Also, I had actively participated in face restoration project, where my proposed "HiFaceGAN" model had achieved SOTA over five subtasks against existing academic methods. 
+        <br>
+        &emsp;   &emsp;   Overall, I consider myself as a quite prolific academic writer. In 2020 I have authored/co-authored 8 papers (5 first author) on top-notch conferences/journals in CV and multimedia, including IEEE TIP, TPAMI, CVPR, ACM MM and ICME. Yet my best paper is always the next one. Besides academic research, I'm also keen on sharing the knowledge and recent technological advances with the community with github open-source projects, invited seminar talks and non-profitable subtitling services.
 	</div>
 	
     
-	<div class="News container" data-rw="0.65">
+	<div class="mainblock container" data-rw="0.65">
 		<a id="news"></a>
 		<h3>News</h3>
+            2020.12 I was awarded "2020 Award for Scientific Research" of Peking University. 
+            <hr/>
             2020.11 Two papers submitted to CVPR.
             <hr/>
             2020.10 Our paper "Towards Fine-grained Human Pose Transfer with Detail Replenishing Network" is accepted by TIP with minor revision.
@@ -124,7 +130,7 @@
             2020.07 One paper on face renovation accepted in ACM Multimedia. Thanks for my co-authors for their invaluable support and contributions!
 	</div>
     
-    <div class="Projects container" data-rw="0.65">
+    <div class="mainblock container" data-rw="0.65">
 		<a id="Projects"></a>
 		<h3>Projects (Click button for details)</h3>
         
@@ -147,12 +153,13 @@
         
 	</div>
     
-	<div class="publications container" data-rw="0.65">
+	<div class="mainblock container" data-rw="0.65">
 		<a id="publications"></a>
 		<h3>Publications</h3>
 		
             
             Lingbo Yang, Zhanning Gao, Peiran Ren, Siwei Ma, Wen Gao, "Intrinsic Temporal Regularization for High-Resolution Human Video Synthesis", Computer Vision and Pattern Recognition (CVPR)
+            <a href="https://arxiv.org/abs/2012.06134"> Arxiv Link</a>
             <a href="projects/intrinsic_reg.html"> Project Page</a>
             <a href="https://www.bilibili.com/video/BV1Z541137j8"> Video Results</a>
             <hr/>
@@ -169,13 +176,14 @@
                     
             <hr/>
 			Lingbo Yang, Pan Wang, Chang Liu, Zhanning Gao, Peiran Ren, Xinfeng Zhang, Shanshe Wang, Siwei Ma, Xiansheng Hua, Wen Gao, "Towards Fine-grained Human Pose Transfer with Detail Replenishing Network", IEEE TIP, 
-			<a href="https://arxiv.org/abs/2005.12494"> Paper Link</a>
+			<a href="https://arxiv.org/abs/2005.12494"> Arxiv Link</a>
             
             
             <hr/>
 			Lingbo Yang, Pan Wang, Xinfeng Zhang, Shanshe Wang, Zhanning Gao, Peiran Ren, Xuansong Xie, Siwei Ma, Wen Gao, "Region-Adaptive Texture Enhancement for Detailed Person Image Synthesis", ICME oral, 2020
 			<a href="https://www.researchgate.net/publication/341408129_Region-Adaptive_Texture_Enhancement_for_Detailed_Person_Image_Synthesis"> Paper Link</a>
             
+            <a href="https://github.com/Lotayou/RATE"> Github Repo</a>
             
 			<hr/>
 			Lingbo Yang, Zhenghui Zhao, Shiqi Wang, Shanshe Wang, Siwei Ma, Wen Gao, "Disentangled Human Action Video Generation via Decoupled Learning", ICME, 2019
@@ -183,10 +191,10 @@
 
 	</div>
 	
-	<div class="container" data-rw="0.65">
+	<div class="mainblock container" data-rw="0.65">
 		<a id="services"></a>
 		<h3>Services</h3>
-			<hr/>
+			
 			2019-01-06 Invited Talk at Student Forum on Frontiers of AI (SFFAI), Chinese Academy of Sciences. <a href="https://www.bilibili.com/video/av41930434"> Video Link </a>
 			<hr/>
 			2019-02-14 VALSE Webinar subtitling service. <a href="http://www.iqiyi.com/w_19s78pzlsx.html"> Video Link </a>
@@ -197,6 +205,11 @@
             2020-10-12 Volunteer of ACM Multimedia 2020. <a href="assets/ACM_volunteer.jpg"> Certificate</a>
 	</div>
 	
+    <div class="mainblock container" data-rw="0.65">
+		<a id="awards"></a>
+		<h3>Awards</h3>
+			2020-12-16 Award for Scientific Research, Peking University<a href="outstanding_research_award_2019_2020.jpg"> Certificate</a>
+	</div>
 	
 	
 	<div class="container" data-rw="0.65">
